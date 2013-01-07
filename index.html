@@ -1,0 +1,561 @@
+
+<html>
+
+	<head>
+		<title>Simon and Sarah &mdash; 03/16/2013</title>
+
+		<meta name="viewport" content="user-scalable=no,width=device-width" />
+
+		<link rel="icon" type="image/png" href="favicon.png" />
+
+		<link rel="StyleSheet" type="text/css" href="css/main.css" media="screen"/>
+
+		<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/mobile.css" />
+
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/slides.min.jquery.js"></script>
+
+		<style type="text/css" media="screen">
+			/*
+				Load CSS before JavaScript
+			*/
+
+			.slides {
+				position: relative;
+			}
+
+			.slides .slides_container {
+				width:470px;
+				height:360px;
+				display:none;
+
+			}
+
+
+			.slides .slides_container div {
+				width:470px;
+				height:360px;
+				display:block;
+			}
+
+
+
+			/*
+				Pagination
+			*/
+
+
+			.pagination {
+				margin:0px auto 0;
+				float: right;
+				z-index: 30;
+				background: #fff;
+			}
+
+			.pagination li {
+				float: left;
+				margin:0 1px;
+				list-style:none;
+			}
+
+			.pagination li a {
+				display:block;
+				width:12px;
+				height:0;
+				padding-top:12px;
+				background-image:url(img/site/pagination.png);
+				background-position:0 0;
+				float:left;
+				overflow:hidden;
+			}
+
+			.pagination li.current a {
+				background-position:0 -12px;
+			}
+
+			/*ul.pagination  {
+				position: absolute;
+				top: 368px;
+				right: 0px;
+
+			}*/
+
+			.slides .slides_container .caption {
+				font-family: helvetica neue;
+				font-weight: 100;
+				text-shadow: 0px 1px #333;
+				width: 100%;
+				height: 50px;
+
+				z-index:500;
+				position:absolute;
+				bottom:0px;
+				left:0;
+				margin: 0;
+
+				padding: 0 5px;
+
+				font-size:1em;
+				line-height: 1;
+				color:#fff;
+
+				background-image: linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgb(0,0,0,0) 100%);
+				background-image: -o-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+				background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+				background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+				background-image: -ms-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+
+				background-image: -webkit-gradient(
+					linear,
+					left bottom,
+					left top,
+					color-stop(0, rgba(0,0,0,.7)),
+					color-stop(1, rgba(0,0,0,0))
+				);
+
+			}
+
+			.slides .slides_container .caption p {
+				margin-top: 25px;
+			}
+
+			.slides .next,.slides .prev {
+				position: relative;
+				margin:  8px 8px 0 0;
+				float: left;
+				z-index:60;
+
+				width:12px;
+				height:18px;
+				background-image:url(img/site/prev_next.png);
+				background-repeat:no-repeat;
+				text-indent:-9999em;
+			}
+
+			a.prev {background-position:0 0px;}
+			a.next {background-position:0 -18px;}
+
+		</style>
+
+		<style type="text/css" media="only screen and (max-device-width: 480px)">
+
+
+			.slides {
+				position: relative;
+			}
+
+			.slides .slides_container {
+				width:100%;
+				height:240px;
+				display:none;
+
+			}
+
+
+			.slides .slides_container div {
+				width:100%;
+				height:240px;
+				display:block;
+			}
+
+
+
+
+			/*
+				Pagination
+			*/
+
+
+			.pagination {
+				margin:0px auto 0;
+				float: right;
+				z-index: 30;
+				background: #fff;
+			}
+
+			.pagination li {
+				float: left;
+				margin:0 1px;
+				list-style:none;
+			}
+
+			.pagination li a {
+				display:block;
+				width:12px;
+				height:0;
+				padding-top:12px;
+				background-image:url(img/site/pagination@2x.png);
+				background-size: 12px;
+				background-position:0 0;
+				float:left;
+				overflow:hidden;
+			}
+
+			.pagination li.current a {
+				background-position:0 -12px;
+			}
+
+
+
+			.slides .slides_container .caption {
+				font-family: helvetica neue;
+				font-weight: 100;
+				text-shadow: 0px 1px #333;
+				width: 100%;
+				height: 50px;
+
+				z-index:500;
+				position:absolute;
+				bottom:0px;
+				left:0;
+				margin: 0;
+
+				padding: 0 5px;
+
+				font-size:1em;
+				line-height: 1;
+				color:#fff;
+
+				background-image: linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgb(0,0,0,0) 100%);
+				background-image: -o-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+				background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+				background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+				background-image: -ms-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+
+				background-image: -webkit-gradient(
+					linear,
+					left bottom,
+					left top,
+					color-stop(0, rgba(0,0,0,.7)),
+					color-stop(1, rgba(0,0,0,0))
+				);
+
+			}
+
+			.slides .slides_container .caption p {
+				margin-top: 25px;
+			}
+
+			.slides .next,.slides .prev {
+				position: relative;
+				margin:  8px 8px 0 0;
+				float: left;
+				z-index:60;
+
+				width:12px;
+				height:18px;
+				background-image:url(img/site/prev_next@2x.png);
+				background-repeat:no-repeat;
+				background-size: 12px;
+				text-indent:-9999em;
+			}
+
+			a.prev {background-position:0 0px;}
+			a.next {background-position:0 -18px;}
+
+			</style>
+
+
+
+		<script>
+
+
+		    $(document).ready(function() {
+
+		    	// center entry landing and size (?)
+		    	// CODE NEEDED
+
+		    	// set deadspace to height of screen
+		    	$('#deadspace').css('height', 100);
+		    });
+
+
+		    // scrolling behavior function
+		    $(window).scroll(function () {
+
+		    	var pos = $("body").scrollTop();
+
+		    	if (pos < 500){
+
+		    		if ( $('#nav').is(':visible')){
+		    			$('#nav').fadeOut();
+		    		}
+		    	}
+
+
+		    	if (pos > 500 ){
+		    		if ( $('#entry_landing').is(':visible')){
+						$('#nav').fadeIn();
+					}
+		    	}
+
+		    	// set opacity of entry_landing
+		    	$('#entry_landing').css('opacity', 1-(pos/600));
+
+				//console.log( $("body").scrollTop() );
+
+		    });
+
+			// jump function to animate smoothly
+			function jump(id){
+
+				// calculate where to scroll to
+				var offset = $(id).offset().top - $('#nav').outerHeight() - 10;
+
+				//console.log(offset);
+				$('body').animate({scrollTop: offset}, 1000);
+			}
+
+			$(function(){
+//				$('#slides').slides({
+//					generateNextPrev: true
+//				});
+
+
+				$('.slides').slides({
+					preload: true,
+					generateNextPrev: true
+				});
+
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id='entry_landing'>
+			<a href='javascript:jump("#our_story");'><img src='img/IMG_4560.jpg' /></a>
+		</div>
+
+
+		<div id='nav'>
+			<ul>
+				<li><a href='javascript:jump("#entry_landing");'><img src='img/site/nav-heart.png' alt='M+L'/></a></li>
+				<li><a href='javascript:jump("#our_story");'>Our Story</a></li>
+				<li><a href='javascript:jump("#time_and_place");'>Time and Place</a></li>
+				<li><a href='javascript:jump("#lodging");'>Lodging</a></li>
+				<li><a href='javascript:jump("#registry");'>Regisrty?</a></li>
+			</ul>
+		</div> <!-- / nav -->
+
+		<div id='deadspace' style='height:200px'>
+			&nbsp;
+		</div> <!-- / deadspace -->
+
+
+		<div id='our_story' class='section'>
+
+			<div class='section_title'>
+        Our Story
+			</div>
+
+			<div class='float_left'>
+				<p>Lauren and Mike met in 2006 on the evening of the fall equinox (photo proof included). Lauren planned on venturing into the Bubble Lounge in downtown SF for only a bit but within a few minutes of entering the Yelp party, Lauren was introduced to Mike through a mutual friend. Mike was moving to SF from Palo Alto and was hoping to meet more friends that evening.</p>
+
+				<p>Mike liked Lauren's striped shirt. Lauren liked Mike's huge smile. They kept looking across the room for each other throughout the night and ultimately ended up seated side-by-side in a window seat chatting for quite some time. </p>
+
+				<p>Lauren returned home and found that Mike had sent Lauren a Yelp friend invite. Lauren accepted. Correspondence followed. And, after one movie night fail (Lauren's fault), Mike asked Lauren on a real date for a romantic candlelight dinner at Chez Spencer. Over delicious, and cheesy French food, Mike and Lauren fell in love.</p>
+
+
+
+			</div>
+
+
+			<div class='right_col'>
+				<div class="slides">
+				    <div class="slides_container">
+				        <div>
+				            <img src="img/us_1.jpg" />
+				            <div class="caption" style="">
+				            	<p>Night we met (9/21/2006)</p>
+				            </div>
+				        </div>
+
+				        <div>
+				            <img src="img/us_6.jpg">
+				            <div class="caption" style="">
+				            	<p>Brian's HS Graduation (6/23/2009)</p>
+				            </div>
+				        </div>
+
+				        <div>
+				            <img src="img/us_5.jpg">
+				            <div class="caption" style="">
+				            	<p>Graduation from CMU (5/16/2010)</p>
+				            </div>
+				        </div>
+
+				        <div>
+				            <img src="img/us_4.jpg">
+				            <div class="caption" style="">
+				            	<p>In Seattle (5/18/2011)</p>
+				            </div>
+				        </div>
+
+				        <div>
+				            <img src="img/us_2.jpg" />
+				            <div class="caption" style="">
+				            	<p>Sandy's Wedding (5/26/2012)</p>
+				            </div>
+				        </div>
+
+
+				        <div>
+				            <img src="img/us_3.jpg">
+				            <div class="caption" style="">
+				            	<p>Lauren's Birthday (7/13/2012)</p>
+				            </div>
+				        </div>
+
+				    </div>
+				</div> <!-- / slides -->
+
+			</div> <!-- / right col -->
+
+
+		</div> <!-- /our story -->
+
+
+		<div id='time_and_place' class='section'>
+
+			<div class='section_title'>
+        Time and Place
+			</div>
+
+			<div class='float_left'>
+				<p>
+				The ceremony and reception will be held on <strong>Saturday, July 13 2013</strong> at the <a href='http://www.beltaneranch.com/' target='blank'>Beltane Ranch</a>.
+				</p>
+
+				<p>
+				<strong>
+				Beltane Ranch <br/>
+				11775 Sonoma Highway <br/>
+				Glen Ellen, CA 95442 <br/>
+				<br/>
+				(707) 996-6501
+				</strong>
+				</p>
+
+				<br/>
+				<p>
+				Tentative schedule of events:
+				</p>
+
+				<ul>
+					<li><strong>4:00pm</strong>&nbsp; Guests Arrive </li>
+					<li><strong>4:30pm</strong>&nbsp; Ceremony Begins </li>
+					<li><strong>5:00pm</strong>&nbsp; Cocktail Hour </li>
+					<li><strong>6:00pm</strong>&nbsp; Dinner is Served </li>
+					<li><strong>7:00pm</strong>&nbsp; Dance! </li>
+					<li><strong>10:00pm</strong>&nbsp; Party at Beltane Ends </li>
+					<li><strong>10:30pm</strong>&nbsp; After-party at Jack London Lodge Begins </li>
+				</ul>
+			</div>
+
+			<div class='right_col'>
+				<!-- <img src='img/image.jpeg' alt='Photo of Lauren and Mike' /> -->
+				<div class="slides">
+			        <div class="slides_container">
+			            <div>
+			                <img src="img/beltane_1.jpg" />
+
+			            </div>
+			            <div>
+			                <img src="img/beltane_2.jpg" />
+			                <div class="caption" style="">
+			                	<p>http://www.beltaneranch.com</p>
+			                </div>
+			            </div>
+			            <div>
+			                <img src="img/beltane_3.jpg">
+			            </div>
+			            <div>
+			                <img src="img/beltane_4.jpg">
+			            </div>
+			        </div>
+			    </div> <!-- / slides -->
+			</div> <!-- / right_col -->
+
+
+		</div> <!-- /time_and_place -->
+
+
+		<div id='lodging' class='section'>
+
+			<div class='section_title'>
+        Lodging
+			</div>
+
+			<div class='right_col'>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msa=0&amp;msid=207405005606236416150.0004d2aac709c53a3f25d&amp;ie=UTF8&amp;t=m&amp;ll=37.761691,-122.413101&amp;spn=0.011875,0.018239&amp;z=15&amp;output=embed"></iframe><br /><small>View <a href="http://maps.google.com/maps/ms?msa=0&amp;msid=207405005606236416150.0004d2aac709c53a3f25d&amp;ie=UTF8&amp;t=m&amp;ll=37.761691,-122.413101&amp;spn=0.011875,0.018239&amp;z=15&amp;source=embed" style="color:#0000FF;text-align:left">S+S</a> in a larger map</small>
+			</div>
+
+			<p>
+			We have reserved the entire <a href='http://www.jacklondonlodge.com/' target='blank'>Jack London Lodge</a>.</p>
+
+			<p>Those interested in staying at the lodge (which is also the site of the Rehearsal Dinner) are encouraged to  make their reservation ASAP as space is limited.
+			</p>
+
+			<p>
+			<strong>Jack London Lodge <br/>
+			13740 Arnold Drive  <br/>
+			Glen Ellen, CA 95442 <br/>
+			<br/>
+			(707) 938-8510
+			</strong>
+			</p>
+
+			<br/>
+
+			<p>
+			Additional places to stay in the area:
+			</p>
+
+			<ul>
+				<li><strong><a href='http://www.chauvetcondominium.com/index.html' target='blank'>The Chauvet</a></strong> &mdash; ($$$, Condo Suites, Extremely Close)</li>
+				<li><strong><a href='http://www.gaige.com/' target='blank'>Gaige House</a></strong> &mdash; ($$$, Individual Rooms, Extremely Close)</li>
+
+				<li><strong><a href='http://www.glenelleninn.com/' target='blank'>Glen Ellen Inn</a></strong> &mdash; ($$, Individual Rooms, Extremely Close)
+
+				<li><strong><a href='http://www.oleahotel.com/' target='blank'>Olea Hotel</a></strong> &mdash; ($$, Individual Rooms, ~0.5 miles away) </li>
+				<br/>
+				<li>Plus many more options in <a href="http://www.yelp.com/search?find_desc=hotels&find_loc=Glen+Ellen%2C+CA&ns=1&ls=bf624a583fc13232#find_loc=santa+rosa,+ca" target='blank'>Santa Rosa</a> and <a href='http://www.yelp.com/search?find_desc=hotels&find_loc=Glen+Ellen%2C+CA&ns=1&ls=bf624a583fc13232#find_loc=Sonoma,+CA' target='blank'>Sonoma</a> </li>
+			</ul>
+
+		</div> <!-- /lodging -->
+
+		<div id='registry' class='section'>
+
+			<div class='section_title'>
+        Regisrty?
+			</div>
+
+			<p>
+			We have registered at the following places:
+			</p>
+
+
+			<div id='store_logos' class='float_left'>
+				<a href='#' target='blank'><img src='img/crate_and_barrel.png' alt='Crate and Barrel' /></a>
+
+				<a href='#' target='blank'><img src='img/bloomingdales.png' alt='Bloomingdales' /></a>
+
+				<a href='#' target='blank'><img src='img/honeyfund.png' alt='Honeyfund' /></a>
+			</div>
+
+
+<!--			<p><strong>Registry information coming January 2013</strong></p>
+
+-->
+		</div> <!-- /registry -->
+
+
+
+	</body>
+
+
+</html>
