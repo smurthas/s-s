@@ -110,3 +110,125 @@ a img {
 #store_logos img:hover{
 	opacity: .5;
 }
+
+
+
+/*
+  Load CSS before JavaScript
+*/
+
+.slides {
+  position: relative;
+}
+
+.slides .slides_container {
+  width:470px;
+  height:360px;
+  display:none;
+
+}
+
+
+.slides .slides_container div {
+  width:470px;
+  height:360px;
+  display:block;
+}
+
+
+
+/*
+  Pagination
+*/
+
+
+.pagination {
+  margin:0px auto 0;
+  float: right;
+  z-index: 30;
+  background: #fff;
+}
+
+.pagination li {
+  float: left;
+  margin:0 1px;
+  list-style:none;
+}
+
+.pagination li a {
+  display:block;
+  width:12px;
+  height:0;
+  padding-top:12px;
+  background-image:url(img/site/pagination.png);
+  background-position:0 0;
+  float:left;
+  overflow:hidden;
+}
+
+.pagination li.current a {
+  background-position:0 -12px;
+}
+
+/*ul.pagination  {
+  position: absolute;
+  top: 368px;
+  right: 0px;
+
+}*/
+
+.slides .slides_container .caption {
+  font-family: helvetica neue;
+  font-weight: 100;
+  text-shadow: 0px 1px #333;
+  width: 100%;
+  height: 50px;
+
+  z-index:500;
+  position:absolute;
+  bottom:0px;
+  left:0;
+  margin: 0;
+
+  padding: 0 5px;
+
+  font-size:1em;
+  line-height: 1;
+  color:#fff;
+
+  background-image: linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgb(0,0,0,0) 100%);
+  background-image: -o-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+  background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+  background-image: -ms-linear-gradient(bottom, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgba(0,0,0,.7)),
+    color-stop(1, rgba(0,0,0,0))
+  );
+
+}
+
+.slides .slides_container .caption p {
+  margin-top: 25px;
+}
+
+.slides .next,.slides .prev {
+  position: relative;
+  margin:  8px 8px 0 0;
+  float: left;
+  z-index:60;
+
+  width:12px;
+  height:18px;
+  background-image:url(img/site/prev_next.png);
+  background-repeat:no-repeat;
+  text-indent:-9999em;
+}
+
+a.prev {background-position:0 0px;}
+a.next {background-position:0 -18px;}
+
