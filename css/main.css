@@ -49,8 +49,8 @@ a img {
 #nav ul li{
 	color: #00ACEC;
 	float: left;
-	margin-right: 80px;
-	font-size: 30px;
+	margin-right: 60px;
+	font-size: 26px;
 }
 
 #nav ul li img:hover{
@@ -64,6 +64,7 @@ a img {
 
 .section_title {
 	border-bottom: 1px solid #00ACEC;
+  font-size: 24px;
 }
 
 .section {
