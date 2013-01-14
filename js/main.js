@@ -4,17 +4,18 @@
     // CODE NEEDED
 
     // set deadspace to height of screen
-    $('#deadspace').css('height', 100);
+//    $('#deadspace').css('height', 100);
  //     $('#nav').fadeIn();
   });
 
 
+  var SWITCH_POS = 200;
   // scrolling behavior function
-  /*$(window).scroll(function () {
+  $(window).scroll(function () {
 
     var pos = $("body").scrollTop();
 
-    if (pos < 200){
+    if (pos < SWITCH_POS){
 
       if ( $('#nav').is(':visible')){
         $('#nav').fadeOut();
@@ -22,18 +23,18 @@
     }
 
 
-    if (pos > 200 ){
-      //if ( $('#entry_landing').is(':visible')){
-      $('#nav').fadeIn();
-    //}
+    if (pos > SWITCH_POS){
+      if ( $('#entry_landing').is(':visible')){
+        $('#nav').fadeIn();
+      }
     }
 
     // set opacity of entry_landing
-    //$('#entry_landing').css('opacity', 1-(pos/600));
+    $('#entry_landing').css('opacity', 1-(pos/SWITCH_POS));
 
   //console.log( $("body").scrollTop() );
 
-  });*/
+  });
 
 // jump function to animate smoothly
 function jump(id){

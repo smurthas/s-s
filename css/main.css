@@ -11,10 +11,13 @@ a img {
 }
 
 #entry_landing {
-	margin-top: 60px;
+	margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 #nav {
+  display: none;
+
 	position: fixed;
 	top: 0px;
 	width: 960px;
