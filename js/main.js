@@ -5,15 +5,16 @@
 
     // set deadspace to height of screen
     $('#deadspace').css('height', 100);
+ //     $('#nav').fadeIn();
   });
 
 
   // scrolling behavior function
-  $(window).scroll(function () {
+  /*$(window).scroll(function () {
 
     var pos = $("body").scrollTop();
 
-    if (pos < 500){
+    if (pos < 200){
 
       if ( $('#nav').is(':visible')){
         $('#nav').fadeOut();
@@ -21,18 +22,18 @@
     }
 
 
-    if (pos > 500 ){
-      if ( $('#entry_landing').is(':visible')){
+    if (pos > 200 ){
+      //if ( $('#entry_landing').is(':visible')){
       $('#nav').fadeIn();
-    }
+    //}
     }
 
     // set opacity of entry_landing
-    $('#entry_landing').css('opacity', 1-(pos/600));
+    //$('#entry_landing').css('opacity', 1-(pos/600));
 
   //console.log( $("body").scrollTop() );
 
-  });
+  });*/
 
 // jump function to animate smoothly
 function jump(id){
@@ -41,7 +42,7 @@ function jump(id){
   var offset = $(id).offset().top - $('#nav').outerHeight() - 10;
 
   //console.log(offset);
-  $('body').animate({scrollTop: offset}, 1000);
+  $('body').animate({scrollTop: offset}, 400);
 }
 
 $(function(){
