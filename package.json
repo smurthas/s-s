@@ -1,0 +1,21 @@
+{
+  "name": "s-s",
+  "version": "0.0.0",
+  "description": "All webpage source code is on the [gh-pages](https://github.com/smurthas/s-s/tree/gh-pages) branch!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/smurthas/s-s.git"
+  },
+  "author": "Simon Murtha-Smith",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "cb7087ac5e4af48329fb6db00e5930610f5791b1",
+  "dependencies": {
+    "express":"",
+    "request":""
+  }
+}
