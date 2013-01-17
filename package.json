@@ -16,6 +16,7 @@
   "gitHead": "cb7087ac5e4af48329fb6db00e5930610f5791b1",
   "dependencies": {
     "express":"",
-    "request":""
+    "request":"",
+    "gdata-js":"3.0.0"
   }
 }
