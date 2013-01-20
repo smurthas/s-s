@@ -58,7 +58,7 @@ body {
 #google_map iframe {
 	margin-top: 20px;
   width: 300px;
- /*display: none;*/
+  height: 300px;
 }
 
 
