@@ -31,6 +31,7 @@ a img {
 #nav ul li{
 	margin-right: 46px;
 	font-size: 24px;
+  font-weight: 600;
 }
 
 #nav ul li img:hover{
@@ -47,10 +48,6 @@ a img {
 
 #party {
   height: 600px;
-}
-
-.section_title {
-  font-size: 24px;
 }
 
 .section p {
