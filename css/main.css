@@ -41,6 +41,14 @@ a img {
 	float: right;
 }
 
+#ill_ride_anywhere_with_you {
+  height: 470px;
+}
+
+#party {
+  height: 600px;
+}
+
 .section_title {
   font-size: 24px;
 }
@@ -52,15 +60,16 @@ a img {
 .right_col {
 	float: right;
   padding-top: 20px;
+  /*padding-right: 20px;*/
 	width: 470px;
 }
 
 .right_col img {
-	width: 470px;
+	width: 450px;
 }
 
 #google_map {
-	width: 470;
+	width: 450;
  	height: 350;
 }
 

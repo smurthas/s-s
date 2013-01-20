@@ -1,5 +1,6 @@
 body {
-	color: #666;
+  background: #71717A;
+	color: #FFF;
 	font-family: "Helvetica Neue", Arial, sans-serif;
 
 	margin-left: auto;
@@ -8,11 +9,16 @@ body {
 
 a:link, a:visited {
 	text-decoration: none;
-	color: #00ACEC;
+	color: #FCD639;
 }
 
 a:hover	{
-	text-decoration: underline;
+	color: #FFE659;
+}
+
+strong {
+  /*color: #FCD639;*/
+  color: #ccc;
 }
 
 #entry_landing {
@@ -20,8 +26,10 @@ a:hover	{
 }
 
 #nav {
-	background-color: rgba(255,255,255,.9);
+	background-color: #71717A;
+  opacity: 0.9;
 	z-index: 100;
+  width: 100%;
 }
 
 #nav ul {
@@ -39,13 +47,13 @@ a:hover	{
 }
 
 .section_title {
-	border-bottom: 1px solid #00ACEC;
+	color: #FCD639;
+	border-bottom: 1px solid #FCD639;
 }
 
 .section {
-	min-height: 500px;
+	/*min-height: 500px;*/
 
-	color: #666;
 	font-size: 16px;
 }
 
@@ -53,5 +61,9 @@ a:hover	{
 	list-style-type: none;
 	margin: 10px 0 0 0;
 	padding: 0;
+}
+
+.section img {
+  border: 8px solid #000;
 }
 
