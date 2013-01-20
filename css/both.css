@@ -1,5 +1,6 @@
 body {
-  background: #71717A;
+  /*background: #71717A;*/
+  background: url("../img/grey-linen-matched.png");
 	color: #FFF;
 	font-family: "Helvetica Neue", Arial, sans-serif;
 
@@ -27,6 +28,7 @@ strong {
 
 #nav {
 	background-color: #71717A;
+  /*background: url("../img/grey-linen-matched.png");*/
   opacity: 0.9;
 	z-index: 100;
   width: 100%;
