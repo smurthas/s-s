@@ -29,25 +29,22 @@ a img {
 }
 
 #nav ul li{
-	margin-right: 46px;
-	font-size: 24px;
+	margin-right: 49px;
+	font-size: 25px;
   font-weight: 600;
 }
 
-#nav ul li img:hover{
+#nav ul li img {
+  padding-left: 10px;
+  margin-top: -10px;
+}
+
+#nav ul li img:hover {
 	opacity: .5;
 }
 
-#nav ul  :last-child {
+#nav ul li:last-child {
 	float: right;
-}
-
-#ill_ride_anywhere_with_you {
-  height: 470px;
-}
-
-#party {
-  height: 600px;
 }
 
 .section p {
@@ -57,7 +54,6 @@ a img {
 .right_col {
 	float: right;
   padding-top: 20px;
-  /*padding-right: 20px;*/
 	width: 470px;
 }
 
@@ -65,7 +61,11 @@ a img {
 	width: 450px;
 }
 
-#google_map {
+.left_col {
+  padding-bottom: 30px;
+}
+
+#google_map iframe {
 	width: 450;
  	height: 350;
 }
@@ -74,12 +74,8 @@ a img {
 	margin-right: 16px;
 }
 
-#store_logos img:hover{
+#store_logos img:hover {
 	opacity: .5;
-}
-
-.float_left {
-	float: left;
 }
 
 

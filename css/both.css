@@ -28,9 +28,8 @@ strong {
 }
 
 #nav {
-	background-color: #71717A;
-  /*background: url("../img/grey-linen-matched.png");*/
-  opacity: 0.9;
+	background-color: rgba(113, 113, 122, 0.9);
+ /* opacity: 0.9;*/
 	z-index: 100;
   width: 100%;
 }
@@ -45,8 +44,8 @@ strong {
 	float: left;
 }
 
-#nav ul  :last-child {
-	margin-right: 0px;
+#nav ul li:last-child {
+	margin-right: 10px;
 }
 
 .section_title {
@@ -72,3 +71,6 @@ strong {
   border: 8px solid #000;
 }
 
+#google_map iframe {
+  border: 8px solid #000;
+}
